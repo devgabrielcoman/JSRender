@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Solarsystem by devgabrielcoman</title>
+    <title>JSRender by devgabrielcoman</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,8 +17,8 @@
       <header>
         <h1>JSRender</h1>
         <p>
-          JSRender is my attempt at a custom built render-engine.  It's built on top of the HTML5 Canvas 
-          and it renders a 3D textured cube on the screen.
+          JSRender is my attempt at a custom built sowtware rendering engine.  
+          It's built on top of the HTML5 Canvas and it renders a 3D textured and shaded cube on the screen.
         </p>
 
         <p class="view"><a href="https://github.com/devgabrielcoman/JSRender" target="_blank">View the Project on GitHub</a> 
@@ -36,7 +36,7 @@
             <li><b>S</b>: move the cube down</li>
             <li><b>Q</b>: move the cube forward</li>
             <li><b>E</b>: move the cube backward</li>
-            <li><b>Z and X</b>: rotate cube
+            <li><b>Z</b> and </b>X</b>: rotate cube on the X axis
           </ul>
         </p>
         <p>
@@ -52,7 +52,11 @@
           While at first sight not really impressive, what I found both challenging and fascinating was starting with raw vector and matrix math and using it to project a point, then a line, then a triangle and finally a cube onto the screen.
         </p>
         <p>
-          Once I got that settled, I started dealing with a simple shading model using directional light.
+          Once I got that settled, I started dealing with a simple shading model using directional light. You can see it in action in the way different faces light up when rotating or translating the cube.
+        </p>
+        <p>
+          Another challange was texturing the cube. Now, normally this would be something that OpenGL or DirectX would handle. At first I said I would use Canvas to directly access the 2D pixel matrix and scan-fill the corresponding pixels so that I could texture the cube.
+          In the end I used some Canvas built-in hack-like functionality to achieve the same result. Not the result I was going for, but it looks ok.
         </p>
       </section>
       <footer>
