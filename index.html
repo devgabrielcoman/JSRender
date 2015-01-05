@@ -25,11 +25,19 @@
       </header>
       <section>
         <h3>
-          The basics
+          About
         </h3>
         <p>
-          This is a rather small demo I created of a simplified solar system, consisting of the Sun and
-          eight surrounding planets.
+          You can use the following keys to move the cube:
+          <ul>
+            <li><b>A</b>: move the cube to the left</li>
+            <li><b>D</b>: move the cube to the right</li>
+            <li><b>W</b>: move the cube up</li>
+            <li><b>S</b>: move the cube down</li>
+            <li><b>Q</b>: move the cube forward</li>
+            <li><b>E</b>: move the cube backward</li>
+            <li><b>Z and X</b>: rotate cube
+          </ul>
         </p>
         <p>
           <a href="example/jsrender.html" target="_blank">View the live example here</a>
@@ -37,24 +45,14 @@
         <p>
           <img src="resources/img_1.jpg"/>
         </p>
-        <p>
-          What really pleased me is that Three.js managed all the scene complexity for me: adding and assigning VBOs, IBOs, buffers, etc, was hidden behind an elegant system of scene, camera, geometry and material management.
-        </p>
-        <p>
-          Which fitted me perfectly, because for I long time I wanted to explore shaders in depth, but without the hassle of setting up the traditional OpenGL or WebGL environment. 
-        </p>
         <h3>
-          Shaders
+          More info
         </h3>
         <p>
-          For this example I created two custom shader pairs (vertex and fragment), besides the one thas
-          come with Three.js. 
+          While at first sight not really impressive, what I found both challenging and fascinating was starting with raw vector and matrix math and using it to project a point, then a line, then a triangle and finally a cube onto the screen.
         </p>
         <p>
-          The first vertex shader is a very simple one that does the basic <i>gl_Position</i> calculation and then passes that info the fragment shader. This in turn calculates a very simple point light (very little ambient color, diffuse with no attenuation, and no specilar component ) to give the planets a shadow / dark side when not facing the sun.
-        </p>
-        <p>
-          The second pair of shaders act as a post-processing step of sorts, performing a horizontal and then vertical blur on the scene, to give the planets and sun a "blurry edge".
+          Once I got that settled, I started dealing with a simple shading model using directional light.
         </p>
       </section>
       <footer>
